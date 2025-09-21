@@ -23,7 +23,7 @@ const DashboardLayout = ({ theme }) => {
       default:
         return <Home theme={theme} />;
     }
-  }, [tab]);
+  }, [tab, theme]);
 
   return (
     <div>

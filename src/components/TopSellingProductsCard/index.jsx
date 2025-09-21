@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
 import classNames from 'classnames';
-import TableWrapper from '../Table';
+import Table from '../Table';
 import styles from './styles.module.css';
 
 const productData = [
@@ -86,14 +86,16 @@ const TopSellingProductsCard = ({ theme }) => {
       <div className={styles.title}>Top Selling Products</div>
       <div className={styles.divider}></div>
 
-      <TableWrapper
-        columns={columns}
-        data={productData}
-        className={styles.tableContainer}
-        pagination={false}
-        showHeader={true}
-        theme={theme}
-      />
+      <div className={styles.tableContainer}>
+        <Table
+          columns={columns}
+          data={productData}
+          className={styles.productTable}
+          pagination={false}
+          showHeader={true}
+          theme={theme}
+        />
+      </div>
     </div>
   );
 };

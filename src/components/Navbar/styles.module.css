@@ -58,9 +58,10 @@
 
 .searchInput.dark {
   color: #fff !important;
+  background-color: #494949 !important;
 }
 
 /* search input placeholder */
 .searchInput.dark ::placeholder {
-  color: #fff !important;
+  color: rgba(255, 255, 255, 0.2) !important;
 }
