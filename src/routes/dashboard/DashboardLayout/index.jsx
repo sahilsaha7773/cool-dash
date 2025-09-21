@@ -1,6 +1,5 @@
 import Navbar from '../../../components/Navbar';
-import SidebarProvider from '../../../contexts/sidebarContext/provider';
-import Home from '../home';
+import Home from '../Home';
 import SidebarContext from '../../../contexts/sidebarContext/context';
 import { useContext } from 'react';
 import styles from './styles.module.css';
