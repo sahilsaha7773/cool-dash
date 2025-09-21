@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --icon-color: #1c1c1c;
+  --icon-bg-color: #e5ecf6;
+  --card-bg-color: rgba(247, 249, 251, 1);
+  --text-color: #000000;
+  --chart-grid-color: #eceef0;
+  --chart-text-color: #1c1c1c;
+  --chart-projection-color: rgba(168, 197, 218, 1);
+  --chart-actual-color: #cfdfeb;
+  --divider-color: rgba(28, 28, 28, 0.2);
+  --progress-bg-color: rgba(255, 255, 255, 0.4);
+  --progress-color: rgba(168, 197, 218, 1);
+  --line-color-1: #000000;
+  --line-color-2: #87ceeb;
+  --map-fill-color: rgba(168, 197, 218, 1);
+  --map-stroke-color: #d0d0d0;
+  --marker-color: #000000;
+  --table-header-color: #6b7280;
+  --sidebar-bg-color: #ffffff;
+  --sidebar-border-color: #f0f0f0;
+  --sidebar-tab-color: rgba(28, 28, 28, 0.2);
+  --sidebar-tab-active-color: rgba(28, 28, 28, 0.4);
+  --sidebar-text-secondary: #666666;
+  --sidebar-text-tertiary: #999999;
+  --sidebar-section-title: rgba(28, 28, 28, 0.4);
+  --sidebar-hover-bg: #f5f5f5;
+  --sidebar-selected-bg: #f0f8ff;
+  --sidebar-selected-border: #1890ff;
+  --sidebar-submenu-bg: #fafafa;
+  --sidebar-submenu-border: #e0e0e0;
+  --sidebar-submenu-hover: #f0f0f0;
+  --sidebar-tooltip-bg: #000000;
+  --sidebar-tooltip-text: #ffffff;
+  --sidebar-active-bg: rgba(28, 28, 28, 0.05);
+  --sidebar-active-indicator: #000000;
+  --page-bg-color: #ffffff;
+  --actions-bg-color: rgba(247, 249, 251, 1);
+  --button-border-color: #d9d9d9;
+  --button-bg-color: #ffffff;
+  --button-text-color: #666666;
+  --button-hover-border: #1890ff;
+  --button-hover-color: #1890ff;
+  --input-border-color: rgba(28, 28, 28, 0.1);
+  --input-bg-color: transparent;
+  --placeholder-color: rgba(0, 0, 0, 0.25);
+  --table-bg-color: #ffffff;
+  --table-header-bg: #fafafa;
+  --table-border-color: #f0f0f0;
+  --table-hover-bg: #f5f5f5;
+  --table-selected-bg: #e6f7ff;
+  --icon-secondary-color: #666666;
+  --pagination-border-color: #d9d9d9;
+  --pagination-bg-color: #ffffff;
+  --pagination-active-bg: rgba(28, 28, 28, 0.05);
+  --pagination-active-border: #1890ff;
+  --pagination-active-text: #000000;
+  --pagination-hover-border: #1890ff;
+  --pagination-hover-color: #1890ff;
+}
+
+[data-theme='dark'] {
+  --icon-color: #ffffff;
+  --icon-bg-color: #2a2a2a;
+  --card-bg-color: #272727;
+  --text-color: #ffffff;
+  --chart-grid-color: #404040;
+  --chart-text-color: #ffffff;
+  --chart-projection-color: rgba(100, 150, 200, 0.8);
+  --chart-actual-color: rgba(150, 180, 220, 0.6);
+  --divider-color: rgba(255, 255, 255, 0.2);
+  --progress-bg-color: rgba(255, 255, 255, 0.2);
+  --progress-color: rgba(100, 150, 200, 0.8);
+  --line-color-1: #ffffff;
+  --line-color-2: #87ceeb;
+  --map-fill-color: rgba(100, 150, 200, 0.6);
+  --map-stroke-color: #404040;
+  --marker-color: #ffffff;
+  --table-header-color: #9ca3af;
+  --sidebar-bg-color: #1a1a1a;
+  --sidebar-border-color: #333333;
+  --sidebar-tab-color: rgba(255, 255, 255, 0.3);
+  --sidebar-tab-active-color: rgba(255, 255, 255, 0.6);
+  --sidebar-text-secondary: #cccccc;
+  --sidebar-text-tertiary: #999999;
+  --sidebar-section-title: rgba(255, 255, 255, 0.4);
+  --sidebar-hover-bg: #2a2a2a;
+  --sidebar-selected-bg: #1e3a5f;
+  --sidebar-selected-border: #4a9eff;
+  --sidebar-submenu-bg: #222222;
+  --sidebar-submenu-border: #444444;
+  --sidebar-submenu-hover: #333333;
+  --sidebar-tooltip-bg: #000000;
+  --sidebar-tooltip-text: #ffffff;
+  --sidebar-active-bg: rgba(255, 255, 255, 0.1);
+  --sidebar-active-indicator: #ffffff;
+  --page-bg-color: #1a1a1a;
+  --actions-bg-color: #2a2a2a;
+  --button-border-color: #404040;
+  --button-bg-color: #2a2a2a;
+  --button-text-color: #cccccc;
+  --button-hover-border: #4a9eff;
+  --button-hover-color: #4a9eff;
+  --input-border-color: rgba(255, 255, 255, 0.1);
+  --input-bg-color: #2a2a2a;
+  --placeholder-color: rgba(255, 255, 255, 0.25);
+  --table-bg-color: #1a1a1a;
+  --table-header-bg: #2a2a2a;
+  --table-border-color: #404040;
+  --table-hover-bg: #2a2a2a;
+  --table-selected-bg: #1e3a5f;
+  --icon-secondary-color: #999999;
+  --pagination-border-color: #404040;
+  --pagination-bg-color: #2a2a2a;
+  --pagination-active-bg: rgba(255, 255, 255, 0.1);
+  --pagination-active-border: #4a9eff;
+  --pagination-active-text: #ffffff;
+  --pagination-hover-border: #4a9eff;
+  --pagination-hover-color: #4a9eff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}

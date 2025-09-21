@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px 28px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background: white;
+}
+
+.container.dark {
+  border-bottom: 1px solid #494949;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb {
+  margin-left: 16px;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  margin-right: 20px;
+  width: 160px;
+}
+
+.dark {
+  background: #1c1c1c;
+  color: #fff !important;
+}
+
+.dark span,
+.dark svg,
+.dark li {
+  color: #fff !important;
+}

@@ -1,0 +1,290 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: var(--sidebar-bg-color, white);
+  border-right: 1px solid var(--sidebar-border-color, #f0f0f0);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.header {
+  padding: 20px 16px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.collapseButton {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  background: #f5f5f5 !important;
+  border: 1px solid #d9d9d9 !important;
+  color: #666 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0;
+}
+
+.collapseButton:hover {
+  background: #e6f7ff !important;
+  border-color: #1890ff !important;
+  color: #1890ff !important;
+}
+
+.userIcon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color, #000);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.tabs {
+  display: flex;
+  padding: 16px 16px 0 16px;
+  gap: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sidebar-tab-color, rgba(28, 28, 28, 0.2));
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  color: var(--sidebar-tab-active-color, rgba(28, 28, 28, 0.4));
+}
+
+.favoritesList {
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.favoriteItem {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--sidebar-text-secondary, #666);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.favoriteItem:hover {
+  color: var(--text-color, #000);
+}
+
+.section {
+  padding: 16px 0;
+}
+
+.sectionTitle {
+  padding: 0 28px 12px 28px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sidebar-section-title, rgba(28, 28, 28, 0.4));
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.menuItem:hover {
+  background: var(--sidebar-hover-bg, #f5f5f5);
+}
+
+.selectedItem {
+  background: var(--sidebar-selected-bg, #f0f8ff);
+  border-right: 3px solid var(--sidebar-selected-border, #1890ff);
+}
+
+.menuItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.menuIcon {
+  font-size: 16px;
+  color: var(--sidebar-text-secondary, #666);
+  width: 16px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.menuLabel {
+  font-size: 14px;
+  color: var(--text-color, #000);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.arrowIcon {
+  font-size: 12px;
+  color: var(--sidebar-text-tertiary, #999);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.subMenu {
+  background: var(--sidebar-submenu-bg, #fafafa);
+  padding-left: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+  }
+}
+
+.subMenuItem {
+  padding: 6px 0 6px 16px;
+  font-size: 14px;
+  color: var(--sidebar-text-secondary, #666);
+  cursor: pointer;
+  border-left: 2px solid var(--sidebar-submenu-border, #e0e0e0);
+  margin-left: 16px;
+  transition: all 0.3s ease;
+}
+
+.subMenuItem:hover {
+  color: var(--text-color, #000);
+  background: var(--sidebar-submenu-hover, #f0f0f0);
+}
+
+.sidebar.collapsed .header {
+  padding: 20px 12px 16px 12px;
+  justify-content: center;
+}
+
+.sidebar.collapsed .userInfo {
+  justify-content: center;
+}
+
+.sidebar.collapsed .menuItem {
+  justify-content: center;
+  padding: 8px 12px;
+}
+
+.sidebar.collapsed .menuItemLeft {
+  justify-content: center;
+}
+
+.sidebar + * {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.collapsed .menuItem:hover {
+  background: var(--sidebar-selected-bg, #f0f8ff);
+  border-radius: 6px;
+}
+
+.sidebar.collapsed .menuItem:hover .menuIcon {
+  color: var(--sidebar-selected-border, #1890ff);
+}
+
+.sidebar.collapsed .menuItem {
+  position: relative;
+}
+
+.sidebar.collapsed .menuItem::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--sidebar-tooltip-bg, #000);
+  color: var(--sidebar-tooltip-text, white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  margin-left: 8px;
+  z-index: 1000;
+}
+
+.sidebar.collapsed .menuItem:hover::after {
+  opacity: 1;
+}

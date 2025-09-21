@@ -1,0 +1,96 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.antTable {
+  width: 100%;
+}
+
+.antTable :global(.ant-table) {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.antTable :global(.ant-table-thead > tr > th) {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--divider-color, #e5e7eb);
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--table-header-color, #6b7280);
+  text-align: left;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.antTable :global(.ant-table-tbody > tr > td) {
+  border: none;
+  border-bottom: 1px solid var(--divider-color, #e5e7eb);
+  padding: 12px 0;
+  font-size: 14px;
+  color: var(--text-color, #000000);
+  background: transparent;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.antTable :global(.ant-table-tbody > tr:last-child > td) {
+  border-bottom: none;
+}
+
+.antTable :global(.ant-table-tbody > tr:hover > td) {
+  background: transparent;
+}
+
+.antTable :global(.ant-table-tbody > tr.ant-table-row:hover) {
+  background: transparent;
+}
+
+.antTable :global(.ant-table-column-sorters) {
+  padding: 0;
+  margin: 0;
+}
+
+.antTable :global(.ant-table-column-sorters:hover) {
+  background: transparent;
+}
+
+.antTable :global(.ant-table-column-sorter) {
+  color: var(--table-header-color, #6b7280);
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.antTable :global(.ant-table-column-sorter-up.active),
+.antTable :global(.ant-table-column-sorter-down.active) {
+  color: var(--text-color, #000000);
+}
+
+@media (max-width: 1024px) {
+  .antTable :global(.ant-table-thead > tr > th),
+  .antTable :global(.ant-table-tbody > tr > td) {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .antTable :global(.ant-table-thead > tr > th),
+  .antTable :global(.ant-table-tbody > tr > td) {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .antTable :global(.ant-table-thead > tr > th),
+  .antTable :global(.ant-table-tbody > tr > td) {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+}

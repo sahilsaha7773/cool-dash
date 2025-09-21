@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 12px;
+}
+.icon svg {
+  width: 32px;
+  height: 32px;
+}
+.content {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time {
+  color: rgba(28, 28, 28, 0.4);
+}
+
+.container.dark .time,
+.container.dark .title {
+  color: #fff !important;
+}

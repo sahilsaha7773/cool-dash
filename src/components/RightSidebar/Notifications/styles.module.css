@@ -1,0 +1,13 @@
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color, black);
+  transition: color 0.3s ease;
+}
+
+.notifications {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: column;
+  gap: 16px;
+}

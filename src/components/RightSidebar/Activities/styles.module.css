@@ -1,0 +1,158 @@
+.activitiesContainer {
+  padding: 24px 0px 0px 0px;
+  background: var(--sidebar-bg-color, white);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color, #000);
+  margin: 0 0 20px 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.timeline {
+  position: relative;
+}
+
+.activityItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.activityItem:last-child {
+  margin-bottom: 0;
+}
+
+.avatarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatarIcon {
+  font-size: 18px;
+  color: white;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 32px;
+  background-color: #e5e7eb;
+  z-index: 1;
+}
+
+.activityContent {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.activityText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color, #000);
+  line-height: 1.4;
+  margin-bottom: 4px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.activityTime {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--sidebar-text-secondary, #9ca3af);
+  line-height: 1.2;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .activitiesContainer {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatarIcon {
+    font-size: 16px;
+  }
+
+  .timelineLine {
+    height: 28px;
+  }
+
+  .activityText {
+    font-size: 14px;
+  }
+
+  .activityTime {
+    color: rgba(28, 28, 28, 0.4);
+  }
+
+  .activityItem {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .activitiesContainer {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .avatarIcon {
+    font-size: 14px;
+  }
+
+  .timelineLine {
+    height: 24px;
+  }
+
+  .activityText {
+    font-size: 12px;
+  }
+
+  .activityTime {
+    font-size: 10px;
+  }
+}

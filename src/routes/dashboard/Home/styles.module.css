@@ -1,0 +1,128 @@
+.container {
+  padding: 28px;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
+.dashboardGrid {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'data-cards data-cards projections projections'
+    'revenue revenue revenue location'
+    'products products products total-sales';
+}
+
+.dataCardContainer {
+  grid-area: data-cards;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+  min-height: 300px;
+}
+
+.projectionsActualsCardContainer {
+  grid-area: projections;
+  min-height: 300px;
+}
+
+.revenueCardContainer {
+  grid-area: revenue;
+  min-height: 300px;
+}
+
+.revenueByLocationCardContainer {
+  grid-area: location;
+  min-height: 300px;
+}
+
+.topSellingProductsCardContainer {
+  grid-area: products;
+  min-height: 300px;
+}
+
+.totalSalesCardContainer {
+  grid-area: total-sales;
+  min-height: 300px;
+}
+
+@media (max-width: 1600px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'data-cards projections projections'
+      'revenue revenue location'
+      'products products total-sales';
+  }
+}
+
+@media (max-width: 1350px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'data-cards projections'
+      'revenue revenue'
+      'products products';
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'data-cards data-cards'
+      'projections location'
+      'revenue revenue'
+      'products total-sales';
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      'data-cards'
+      'projections'
+      'revenue'
+      'location'
+      'products'
+      'total-sales';
+    gap: 16px;
+  }
+
+  .dataCardContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .dashboardGrid {
+    gap: 12px;
+  }
+}

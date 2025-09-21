@@ -1,0 +1,116 @@
+.contactsContainer {
+  padding: 24px 0px;
+  background: var(--sidebar-bg-color, white);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color, #000);
+  margin: 0 0 20px 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding: 4px 0;
+}
+
+.contactItem:hover {
+  background-color: var(--sidebar-hover-bg, #f9fafb);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatarIcon {
+  font-size: 18px;
+  color: white;
+}
+
+.contactName {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color, #000);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contactsContainer {
+    padding: 16px 0px;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .contactsList {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatarIcon {
+    font-size: 16px;
+  }
+
+  .contactName {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactsContainer {
+    padding: 12px 0px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .avatarIcon {
+    font-size: 14px;
+  }
+
+  .contactName {
+    font-size: 12px;
+  }
+
+  .contactsList {
+    gap: 10px;
+  }
+}

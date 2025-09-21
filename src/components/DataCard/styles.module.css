@@ -1,0 +1,45 @@
+.container {
+  padding: 24px;
+  border-radius: 16px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.valueContainer {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.currentValue {
+  font-size: 28px;
+  color: black;
+  font-weight: 500;
+}
+
+.percentageContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.percentage {
+  font-size: 16px;
+  color: black;
+}
+
+.container.dark .title,
+.container.dark .currentValue,
+.container.dark .percentage,
+.container.dark .percentageContainer {
+  color: #fff !important;
+}
