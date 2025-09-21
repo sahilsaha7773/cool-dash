@@ -1,7 +1,7 @@
 import Navbar from '../../../components/Navbar';
 import Home from '../Home';
 import SidebarContext from '../../../contexts/sidebarContext/context';
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import styles from './styles.module.css';
 import LeftSidebar from '../../../components/LeftSidebar';
 import RightSidebar from '../../../components/RightSidebar';
@@ -13,6 +13,17 @@ const DashboardLayout = ({ theme }) => {
   const { tab } = useParams();
   const { leftSidebarCollapsed, rightSidebarCollapsed } =
     useContext(SidebarContext);
+
+  const TabComponent = useMemo(() => {
+    switch (tab) {
+      case 'home':
+        return <Home theme={theme} />;
+      case 'order-list':
+        return <OrderList theme={theme} />;
+      default:
+        return <Home theme={theme} />;
+    }
+  }, [tab]);
 
   return (
     <div>
@@ -26,11 +37,7 @@ const DashboardLayout = ({ theme }) => {
         </div>
         <div className={styles.middleContainer}>
           <Navbar theme={theme} />
-          {tab === 'home' ? (
-            <Home theme={theme} />
-          ) : (
-            <OrderList theme={theme} />
-          )}
+          {TabComponent}
         </div>
         <div className={styles.rightSidebar}>
           <RightSidebar

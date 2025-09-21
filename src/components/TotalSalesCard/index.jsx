@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 import classNames from 'classnames';
 import styles from './styles.module.css';
@@ -11,17 +11,21 @@ const salesData = [
 ];
 
 const TotalSalesCard = ({ theme }) => {
-  const formatCurrency = (amount) => {
+  const formatCurrency = useCallback((amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 2,
     }).format(amount);
-  };
+  }, []);
 
-  const totalValue = salesData.reduce((sum, item) => sum + item.value, 0);
-  const affiliatePercentage = ((salesData[1].value / totalValue) * 100).toFixed(
-    1,
+  const totalValue = useMemo(
+    () => salesData.reduce((sum, item) => sum + item.value, 0),
+    [salesData],
+  );
+  const affiliatePercentage = useMemo(
+    () => ((salesData[1].value / totalValue) * 100).toFixed(1),
+    [salesData, totalValue],
   );
 
   return (
