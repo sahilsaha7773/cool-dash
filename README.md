@@ -1,6 +1,6 @@
 # Cool Dash
 
-## 🚀 Features
+## Features
 
 - **Dark/Light Theme Support**: Seamless theme switching with CSS custom properties
 - **Interactive Data Visualization**: Charts and graphs using Recharts library
@@ -10,7 +10,16 @@
 - **Routing**: Client-side routing with React Router
 - **Modern Build System**: RSBuild for fast development and optimized production builds
 
-## 🏗️ Architecture
+## Screens
+### Light Theme
+<img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/c689cec8-51cf-4291-b6bc-62b8956f476d" />
+<img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/a0d68b03-6394-4f15-98d4-1cbaf51ccef7" />
+
+### Dark Theme
+<img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/75fb5fe5-1a79-41a6-870c-832a400bc39a" />
+<img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/e67007b8-c76d-4319-bfea-6828e7116a63" />
+
+## Architecture
 
 ### Tech Stack
 
@@ -57,7 +66,7 @@ src/
 └── index.jsx                  # Application entry point
 ```
 
-## 🎨 Theming System
+## Theming System
 
 The application uses CSS custom properties for theming, supporting both light and dark modes:
 
@@ -66,7 +75,7 @@ The application uses CSS custom properties for theming, supporting both light an
 - **Dynamic Switching**: Real-time theme changes without page reload
 - **Consistent Design**: Unified color palette across all components
 
-## 🧩 Component Architecture
+## Component Architecture
 
 ### Core Components
 
@@ -90,7 +99,7 @@ The application uses CSS custom properties for theming, supporting both light an
 2. **Input**: Styled form input components
 3. **Breadcrumb**: Navigation breadcrumb trail
 
-## 🛣️ Routing Structure
+## Routing Structure
 
 The application uses React Router for client-side navigation:
 
@@ -99,7 +108,7 @@ The application uses React Router for client-side navigation:
   - `/home` - Main dashboard
   - `/order-list` - Order management page
 
-## 🚀 Setup
+## Setup
 
 ### Prerequisites
 
@@ -140,7 +149,7 @@ Preview the production build locally:
 yarn preview
 ```
 
-## 🛠️ Development Scripts
+## Development Scripts
 
 - `yarn dev` - Start development server with hot reload
 - `yarn build` - Build production bundle
@@ -148,14 +157,14 @@ yarn preview
 - `yarn lint` - Run ESLint for code quality
 - `yarn format` - Format code with Prettier
 
-## 🔧 Configuration
+## Configuration
 
 - **RSBuild**: Modern build tool configuration
 - **ESLint**: Code quality and consistency
 - **Prettier**: Code formatting
 - **SVGR**: SVG to React component conversion
 
-## 📦 Dependencies
+## Dependencies
 
 ### Core Dependencies
 
