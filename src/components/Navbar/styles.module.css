@@ -55,3 +55,12 @@
 .dark li {
   color: #fff !important;
 }
+
+.searchInput.dark {
+  color: #fff !important;
+}
+
+/* search input placeholder */
+.searchInput.dark ::placeholder {
+  color: #fff !important;
+}

@@ -65,7 +65,7 @@ const Navbar = ({ theme }) => {
           placeholder="Search"
           prefix={<SearchIcon />}
           suffix={<SearchCommandIcon />}
-          className={styles.searchInput}
+          className={classNames(styles.searchInput, styles[theme])}
         />
         <LightModeIcon className={styles.icon} onClick={handleThemeToggle} />
         <RecentsIcon className={styles.icon} />
